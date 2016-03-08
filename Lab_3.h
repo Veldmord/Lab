@@ -51,10 +51,10 @@ int main()
 	int q, w;
 	cin >> q;
 	cin >> w;
-	Bool n2(q, w);
+	Bool n2(q, w);   // сравнение чисел через конструктор 
 
-	Bool n1;
-	int a, c;
+	Bool n1;      // стравнение чисел тупо через функцию 
+	int a, c;     
 	cin >> a;
 	cin >> c;
 	
@@ -62,7 +62,7 @@ int main()
 	char *str2;
 	cin >> str1;
 	cin >> str2;
-	Bool n3(str1,str2);
+	Bool n3(str1,str2);   // стравнение строки через конструктор 
 
 
 	n1.compar(c, a);
