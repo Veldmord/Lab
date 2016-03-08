@@ -15,8 +15,17 @@ public:
 	~Bool() {
 		
 	}
-	
-	Bool(int a, int c) //: nomer1(a), nomer2(c)
+	Bool(char *x, char *z)
+	{
+		int q = strcmp(x, z);
+		if (q == 1)
+			cout << "False";
+		else
+			cout << "True";
+
+
+	}
+	Bool(int a, int c) //: nomer1(c), nomer2(b)
 	{
 		if (a > c)
 			cout << "True";
@@ -38,14 +47,23 @@ public:
 
 int main()
 {
-	Bool n1;
+	
 	int q, w;
 	cin >> q;
 	cin >> w;
 	Bool n2(q, w);
+
+	Bool n1;
 	int a, c;
 	cin >> a;
 	cin >> c;
+	
+	char *str1;
+	char *str2;
+	cin >> str1;
+	cin >> str2;
+	Bool n3(str1,str2);
+
 
 	n1.compar(c, a);
 
