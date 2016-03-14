@@ -1,0 +1,109 @@
+
+#include <iostream>
+
+
+using namespace std;
+
+class BoolS
+{
+public:
+	
+
+	bool NOT(bool a)
+	{
+		if (a == true)
+			return false;
+		else
+			return true;
+	}
+
+	bool AND(bool a, bool b)
+	{
+		if ((a == true) && (b == true))
+			return true;
+		else
+			return false;
+	}
+
+	bool OR(bool a, bool b)
+	{
+		if ((a == false) && (b == false))
+			return false;
+		else
+			return true;
+	}
+
+	bool IMP(bool a, bool b)
+	{
+		if ((a == true) && (b == false))
+			return false;
+		else
+			return true;
+	}
+
+	bool EQU(bool a, bool b)
+	{
+		if (((a == true) && (b == true)) || ((a == false) && (b == false)))
+			return true;
+		else
+			return false;
+	}
+
+	bool XOR(bool a, bool b)
+	{
+		if (((a == true) && (b == true)) || ((a == false) && (b == false)))
+			return false;
+		else
+			return true;
+	}
+
+};
+
+
+int main() {
+	BoolS n1;
+	bool a, b;
+	int q;
+	cout << "Print value a  1 or 0 " << endl;
+	cin >> a;
+	cout << "Print value b  1 or 0 " << endl;
+	cin >> b;
+	cout << "Put namber /n 1 = NOT /n 2 = and 3 = or /n 4 = imp /n 5 = equ /n 6 = xor " << endl;
+	cin >> q;
+
+	switch (q)
+	{
+     case 1: 
+	 {
+		 n1.NOT(a);
+		 break;
+	 }
+	 case 2: 
+	 {
+		n1.AND( a, b);
+		 break;
+	 }
+	 case 3: 
+	 {
+		 n1.OR( a,  b);
+		 break;
+	 }
+	 case 4: 
+	 {
+		 n1.IMP( a,  b);
+		 break;
+	 }
+	 case 5: 
+	 {
+		 n1.EQU( a,  b);
+		 break;
+	 }
+	 case 6: 
+	 {
+		 n1.XOR( a,  b);
+		 break;
+	 }
+	 default: 
+		 cout << "Nepravilni vvod" << endl;
+	}
+}
